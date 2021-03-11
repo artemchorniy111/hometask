@@ -23,9 +23,7 @@ derevo('ДерЕвО');
 // 2 sposib
 
 function derevo2(word){
-    let wordArr = word.toLowerCase().split('');
-    wordArr.map(el => { myLetter.includes(el) ? set.add(el) : 0; return resultTask1 });
-    console.log([...set]);
+    word.toLowerCase().split('').map(el => { myLetter.includes(el) ? set.add(el) : 0; return set });
 }
 
 derevo2('ДерЕвО');
