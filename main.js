@@ -2,9 +2,11 @@
 //Task 1;
 console.log('------TASK--1-----');
 
-
 let set = new Set();
-const result = [];
+
+const myLetter = ['е', 'у', 'о', 'р', 'н', 'к']
+
+// 1 sposib
 
 function derevo(word) {
     let wordLowwer = word.toLowerCase();
@@ -17,6 +19,17 @@ function derevo(word) {
 }
 
 derevo('ДерЕвО');
+
+// 2 sposib
+
+function derevo2(word){
+    let wordArr = word.toLowerCase().split('');
+    wordArr.map(el => { myLetter.includes(el) ? set.add(el) : 0; return resultTask1 });
+    console.log([...set]);
+}
+
+derevo2('ДерЕвО');
+
 
 
 // Task 2
@@ -48,76 +61,86 @@ console.log(newArr2);
 
 // Task 3
 console.log('------TASK--3-----');
-const task3 = ['a', 7, 'g', 3, 'k']
+
+const task3 = ['a', 7, 'g', 3, 'k'];
 let count = 0;
-const task3Result = [];
-// ---- 1 спосіб 
-console.log('Спосіб 1:');
-console.log(task3.join('\n')); // .split() 
-// ---- 2 спосіб 
-console.log('Спосіб 2:');
-console.log(...task3+'');
-// ---- 3 спосіб 
-console.log('Спосіб 3:');
-const [one, two, three, four, five] = task3;
-console.log(`${one + two + three + four + five}`);
-// ---- 4 спосіб 
-console.log('Спосіб 4:');
-{
-    const yourWord = ' new';
-    if(task3.length > 10){
-        console.log('Work with length < 10 only :(');
-        return 0;
-    }
+
+function myCycle(){
     if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
-    }
-    if(count < task3.length){
-        task3Result.push(task3[count] + yourWord);
-        console.log(task3Result);
-        count += 1
+        console.log(task3[count]);
+        count++
+        myCycle();
     }
 }
+myCycle()
+
+// // ---- 1 спосіб 
+// console.log('Спосіб 1:');
+// console.log(task3.join('\n')); // .split() 
+// // ---- 2 спосіб 
+// console.log('Спосіб 2:');
+// console.log(...task3+'');
+// // ---- 3 спосіб 
+// console.log('Спосіб 3:');
+// const [one, two, three, four, five] = task3;
+// console.log(`${one + two + three + four + five}`);
+// // ---- 4 спосіб 
+// console.log('Спосіб 4:');
+// {
+//     const yourWord = ' new';
+//     if(task3.length > 10){
+//         console.log('Work with length < 10 only :(');
+//         return 0;
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+//     if(count < task3.length){
+//         task3Result.push(task3[count] + yourWord);
+//         console.log(task3Result);
+//         count += 1
+//     }
+// }
 
